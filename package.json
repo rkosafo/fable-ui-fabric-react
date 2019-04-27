@@ -1,0 +1,14 @@
+{
+  "name": "uifabric",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "rko",
+  "license": "dontuse",
+  "private": null,
+  "dependencies": {
+    "core-js": "^3.0.1",
+    "office-ui-fabric-react": "^6.172.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
