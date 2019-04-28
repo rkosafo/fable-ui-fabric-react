@@ -6,7 +6,7 @@
   "license": "dontuse",
   "private": null,
   "dependencies": {
-    "core-js": "^3.0.1",
+    "core-js": "^2.6.3",
     "office-ui-fabric-react": "^6.172.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"

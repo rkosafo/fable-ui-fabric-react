@@ -9,6 +9,11 @@ open Fable.Core.JsInterop
 
 
 [<RequireQualifiedAccess>]
+module Icons = //todo: replace with string enum
+  let [<Literal>] Dictionary = "Dictionary"
+
+
+[<RequireQualifiedAccess>]
 module Icon =
   type [<StringEnum>] IconType =
     | Default
@@ -28,4 +33,8 @@ module Icon =
 
   let icon props = ofImport "Icon" ImportPath (p props)
 
+  ///Create an icon with the given name
+  let icon' name = icon [IconName name] []
+
+  ///Call this before using icons
   let initializeIcons = importMember<unit -> unit> ImportPath
