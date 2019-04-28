@@ -4,7 +4,7 @@
   "main": "index.js",
   "author": "rko",
   "license": "dontuse",
-  "private": null,
+  "private": false,
   "dependencies": {
     "core-js": "^2.6.3",
     "office-ui-fabric-react": "^6.172.0",
