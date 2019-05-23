@@ -4,12 +4,12 @@
 open System
 open Fable.Core
 open Utils
-open Fable.Helpers.React
+open Fable.React
 
 
 [<RequireQualifiedAccess>]
 module Button =
-  open Fable.Helpers.React.Props
+  open Fable.React.Props
 
   type IButton =
     | DismissMenu of (unit -> unit)
@@ -29,7 +29,7 @@ module Button =
     //getClassNames
     //getSplitButtonClassNames
     | Href of string
-    | IconProps of Icon.IIconProps list
+    | IconProps of Icons.IIconProps list
     //KeytipProps of IKeytipProps
     | Primary of bool
     | PrimaryDisabled of bool
@@ -40,6 +40,7 @@ module Button =
     | Text of string
     | Toggle of bool
     | UniqueId of string
+    | OnClick of (unit -> unit)
     | [<CompiledName("uniqueId")>] UniqueIdInt of int
     | Props of IHTMLProp list
     interface IHTMLProp
@@ -48,7 +49,7 @@ module Button =
     props 
     |> List.fold (fun s x -> match x with
                               | Props x -> s @ x
-                              | IconProps xs -> unbox("iconProps", Icon.p xs) :: s
+                              | IconProps xs -> unbox("iconProps", Icons.p xs) :: s
                               | x -> (x :> IHTMLProp) :: s) []
     |> kvl
 

@@ -6,15 +6,77 @@
 
   <ItemGroup>
     <Compile Include="Utils.fs" />
+    <Compile Include="Interfaces.fs" />
+    <Compile Include="Styling.fs" />
+    <Compile Include="Fabric.fs" />
     <Compile Include="Content\Icon.fs" />
     <Compile Include="BasicInput\Button.fs" />
+    <Compile Include="BasicInput\Checkbox.fs" />
+    <Compile Include="BasicInput\ChoiceGroup.fs" />
+    <Compile Include="BasicInput\ComboBox.fs" />
+    <Compile Include="BasicInput\Dropdown.fs" />
+    <Compile Include="BasicInput\Label.fs" />
+    <Compile Include="BasicInput\Link.fs" />
+    <Compile Include="BasicInput\Rating.fs" />
+    <Compile Include="BasicInput\SearchBox.fs" />
+    <Compile Include="BasicInput\Slider.fs" />
+    <Compile Include="BasicInput\SpinButton.fs" />
+    <Compile Include="BasicInput\TextField.fs" />
+    <Compile Include="BasicInput\Toggle.fs" />
+    <Compile Include="GalleriesPickers\Calendar.fs" />
+    <Compile Include="GalleriesPickers\ColorPicker.fs" />
+    <Compile Include="GalleriesPickers\DatePicker.fs" />
+    <Compile Include="GalleriesPickers\PeoplePicker.fs" />
+    <Compile Include="GalleriesPickers\Pickers.fs" />
+    <Compile Include="GalleriesPickers\SwatchColorPicker.fs" />
+    <Compile Include="ItemLists\ActivityItem.fs" />
+    <Compile Include="ItemLists\DetailsList.fs" />
+    <Compile Include="ItemLists\DocumentCard.fs" />
+    <Compile Include="ItemLists\Facepile.fs" />
+    <Compile Include="ItemLists\GroupedList.fs" />
+    <Compile Include="ItemLists\HoverCard.fs" />
+    <Compile Include="ItemLists\BasicList.fs" />
+    <Compile Include="ItemLists\Persona.fs" />
+    <Compile Include="CommandsMenusNavs\Breadcrumb.fs" />
+    <Compile Include="CommandsMenusNavs\CommandBar.fs" />
+    <Compile Include="CommandsMenusNavs\ContextualMenu.fs" />
+    <Compile Include="CommandsMenusNavs\Nav.fs" />
+    <Compile Include="CommandsMenusNavs\OverflowSet.fs" />
+    <Compile Include="CommandsMenusNavs\Pivot.fs" />
+    <Compile Include="NotificationEngagement\Coachmark.fs" />
+    <Compile Include="NotificationEngagement\MessageBar.fs" />
+    <Compile Include="NotificationEngagement\TeachingBubble.fs" />
+    <Compile Include="Progress\ProgressIndicator.fs" />
+    <Compile Include="Progress\Shimmer.fs" />
+    <Compile Include="Progress\Spinner.fs" />
+    <Compile Include="Surfaces\Callout.fs" />
     <Compile Include="Surfaces\Dialog.fs" />
+    <Compile Include="Surfaces\Modal.fs" />
+    <Compile Include="Surfaces\Panel.fs" />
+    <Compile Include="Surfaces\ScrollablePane.fs" />
+    <Compile Include="Surfaces\Tooltip.fs" />
+    <Compile Include="Utilities\Announced.fs" />
+    <Compile Include="Utilities\FocusTrapZone.fs" />
+    <Compile Include="Utilities\FocusZone.fs" />
+    <Compile Include="Utilities\Image.fs" />
+    <Compile Include="Utilities\Keytips.fs" />
+    <Compile Include="Utilities\Layer.fs" />
+    <Compile Include="Utilities\MarqueeSelection.fs" />
+    <Compile Include="Utilities\Overlay.fs" />
+    <Compile Include="Utilities\ResizeGroup.fs" />
+    <Compile Include="Utilities\Selection.fs" />
+    <Compile Include="Utilities\Separator.fs" />
+    <Compile Include="Utilities\Stack.fs" />
+    <Compile Include="Utilities\Text.fs" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Fable.Core" Version="2.0.3" />
-    <PackageReference Include="Fable.Import.Browser" Version="1.3.0" />
-    <PackageReference Include="Fable.React" Version="4.1.3" />
+    <PackageReference Include="Fable.Core" Version="3.0.0" />
+    <PackageReference Include="Fable.Browser.Blob" Version="1.0.0" />
+    <PackageReference Include="Fable.Browser.Dom" Version="1.0.0" />
+    <PackageReference Include="Fable.Browser.Event" Version="1.0.0" />
+    <PackageReference Include="Fable.Browser.WebStorage" Version="1.0.0" />
+    <PackageReference Include="Fable.React" Version="5.2.3" />
   </ItemGroup>
 
   <ItemGroup>

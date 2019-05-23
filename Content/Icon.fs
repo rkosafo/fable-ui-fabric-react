@@ -2,22 +2,18 @@
 
 
 open Fable.Core
-open Fable.Helpers.React
-open Fable.Helpers.React.Props
+open Fable.React
+open Fable.React.Props
 open Utils
 open Fable.Core.JsInterop
 
-
-[<RequireQualifiedAccess>]
-module Iconsx = //todo: replace with string enum
-  let [<Literal>] Dictionary = "Dictionary"
 
 type [<StringEnum>] Icons =
   | Dictionary
 
 
 [<RequireQualifiedAccess>]
-module Icon =
+module Icons =
   type [<StringEnum>] IconType =
     | Default
     | Image
@@ -34,10 +30,13 @@ module Icon =
                               | x -> (x :> IHTMLProp) :: s) []
     |> kvl
 
+  ///Call this before using icons
+  let initializeIcons = importMember<unit -> unit> ImportPath
+
+
+[<AutoOpen>]
+module Auto =
   let icon props = ofImport "Icon" ImportPath (p props)
 
   ///Create an icon with the given name
-  let icon' (name: Icons) = icon [IconName !!name] []
-
-  ///Call this before using icons
-  let initializeIcons = importMember<unit -> unit> ImportPath
+  let icon' (name: Icons) = icon [Icons.IconName !!name] []
