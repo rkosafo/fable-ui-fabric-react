@@ -21,7 +21,7 @@ module Dropdown =
     | MultiSelect of bool
     | MultiSelectDelimiter of string
     | NotifyOnReselect of bool
-    | OnChange of ((obj * IDropdownOption * int option) -> unit)
+    | OnChange of (Browser.Types.Event -> IDropdownOption -> int -> unit)
     | OnDismiss of (unit -> unit)
     | OnRenderPlaceholder of (IDropdownOption -> ReactElement)
     | OnRenderTitle of (IDropdownOption -> ReactElement)
@@ -29,6 +29,8 @@ module Dropdown =
     | ResponsiveMode of ResponsiveMode
     | SelectedKeys of int []
     | [<CompiledName("selectedKeys")>]SelectedKeysStr of string []
+    | SelectedKey of int
+    | [<CompiledName("selectedKey")>]SelectedKeyStr of string
     | Styles of {| root: obj |}
     | Theme of ITheme
     | Label of string

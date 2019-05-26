@@ -13,6 +13,8 @@ module TextField =
     | Label of string
     | Disabled of bool
     | Required of bool
+    | Value of string
+    | OnChange of (Browser.Types.Event -> string -> unit)
     | DefaultValue of string
     | ErrorMessage of string
     | Placeholder of string
@@ -24,6 +26,7 @@ module TextField =
     | Description of bool
     | Borderless of bool
     | DeferredValidationTime of int
+    | IconProps of {| iconName: string |}
     | Mask of string
     | MaskFormat of obj
     | Prefix of string
