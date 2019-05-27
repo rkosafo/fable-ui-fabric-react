@@ -17,6 +17,7 @@ module TextField =
     | OnChange of (Browser.Types.Event -> string -> unit)
     | DefaultValue of string
     | ErrorMessage of string
+    | OnGetErrorMessage of (string -> string)
     | Placeholder of string
     | Multiline of bool
     | Rows of int
