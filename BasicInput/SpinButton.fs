@@ -22,7 +22,7 @@ module SpinButton =
     | [<CompiledName("min")>]MinFloat of float
     | OnDecrement of (string -> unit)
     | OnIncrement of (string -> unit)
-    | OnValidate of ((string * obj -> string))
+    | OnValidate of ((string -> Browser.Types.Event -> string))
     | OnFocus of (unit -> unit)
     | OnBlur of (unit -> unit)
     | Precision of int

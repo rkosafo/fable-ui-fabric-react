@@ -31,6 +31,7 @@ module Dropdown =
     | [<CompiledName("selectedKeys")>]SelectedKeysStr of string []
     | SelectedKey of int
     | [<CompiledName("selectedKey")>]SelectedKeyStr of string
+    | ErrorMessage of string
     | Styles of {| root: obj |}
     | Theme of ITheme
     | Label of string

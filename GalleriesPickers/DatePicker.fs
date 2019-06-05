@@ -29,6 +29,7 @@ module DatePicker =
     | InitialPickerDate of DateTime
     | IsMonthPickerVisible of bool
     | IsRequired of bool
+    | ErrorMessage of string
     | Label of string
     | MaxDate of DateTime
     | MinDate of DateTime
@@ -42,6 +43,7 @@ module DatePicker =
     | Styles of {| root: obj |}
     | TabIndex of int
     | TextField of TextField.ITextFieldProps list
+    | OnValidate of (string -> string)
     | Theme of ITheme
     | Today of DateTime option
     | Underlined of bool

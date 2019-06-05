@@ -49,6 +49,7 @@
     <Compile Include="Progress\ProgressIndicator.fs" />
     <Compile Include="Progress\Shimmer.fs" />
     <Compile Include="Progress\Spinner.fs" />
+    <Compile Include="Surfaces\Separator.fs" />
     <Compile Include="Surfaces\Callout.fs" />
     <Compile Include="Surfaces\Dialog.fs" />
     <Compile Include="Surfaces\Modal.fs" />

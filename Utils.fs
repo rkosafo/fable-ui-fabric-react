@@ -6,4 +6,3 @@ module Utils =
 
   let [<Literal>] ImportPath = "office-ui-fabric-react"
   let kvl xs = JsInterop.keyValueList CaseRules.LowerFirst xs
-
