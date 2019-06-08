@@ -24,6 +24,7 @@ module TextField =
     | Resizable of bool
     | Underlined of bool
     | AutoAdjustHeight of bool
+    | AutoComplete of bool
     | Description of bool
     | Borderless of bool
     | DeferredValidationTime of int
@@ -33,6 +34,7 @@ module TextField =
     | Prefix of string
     | ReadOnly of bool
     | Suffix of string
+    | OnRenderSuffix of (obj -> ReactElement)
     | ValidateOnFocusIn of bool
     | ValidateOnFocusOut of bool
     | Styles of {| root: obj |}
