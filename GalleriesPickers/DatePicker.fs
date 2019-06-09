@@ -29,7 +29,7 @@ module DatePicker =
     | InitialPickerDate of DateTime
     | IsMonthPickerVisible of bool
     | IsRequired of bool
-    | ErrorMessage of string
+    //| ErrorMessage of string
     | Label of string
     | MaxDate of DateTime
     | MinDate of DateTime
