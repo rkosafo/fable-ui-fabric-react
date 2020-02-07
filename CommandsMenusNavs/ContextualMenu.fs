@@ -1,2 +1,2 @@
-﻿module ContextualMenu
+﻿module Fable.UIFabric.ContextualMenu
 

@@ -1,2 +1,2 @@
-﻿module Keytips
+﻿module Fable.UIFabric.Keytips
 

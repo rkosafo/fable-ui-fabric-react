@@ -1,2 +1,2 @@
-﻿module Toggle
+﻿module Fable.UIFabric.Toggle
 

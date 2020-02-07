@@ -1,4 +1,4 @@
-﻿namespace UiFabric
+﻿namespace Fable.UIFabric
 
 
 open Fable.Core
@@ -22,11 +22,11 @@ module SpinButton =
     | [<CompiledName("min")>]MinFloat of float
     | OnDecrement of (string -> unit)
     | OnIncrement of (string -> unit)
-    | OnValidate of ((string -> Browser.Types.Event -> string))
+    | OnValidate of (string -> Browser.Types.Event -> string)
     | OnFocus of (unit -> unit)
-    | OnBlur of (unit -> unit)
+    | OnBlur of (Browser.Types.Event -> unit)
     | Precision of int
-    | Step of int
+    | Step of double
     | Styles of {| root: obj |}
     | Theme of ITheme
     | Value of string

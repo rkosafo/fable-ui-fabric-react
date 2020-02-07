@@ -1,2 +1,2 @@
-﻿module Image
+﻿module Fable.UIFabric.Image
 

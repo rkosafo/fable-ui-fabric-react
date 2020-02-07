@@ -1,2 +1,2 @@
-﻿module Coachmark
+﻿module Fable.UIFabric.Coachmark
 

@@ -1,4 +1,4 @@
-﻿namespace UiFabric
+﻿namespace Fable.UIFabric
 
 
 open System
@@ -41,6 +41,7 @@ module DatePicker =
     | ShowMonthPickerAsOverlay of bool
     | ShowWeekNumbers of bool
     | Styles of {| root: obj |}
+    | Style of obj
     | TabIndex of int
     | TextField of TextField.ITextFieldProps list
     | OnValidate of (string -> string)

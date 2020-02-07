@@ -1,4 +1,4 @@
-﻿namespace UiFabric
+﻿namespace Fable.UIFabric
 
 
 open Fable.Core
@@ -18,19 +18,19 @@ module Dialog =
     | SubText of string
     static member p (xs: IDialogContentProps list) = kvl xs
   
-  type IModelProps =
+  type IModalProps =
     | TitleAriaId of string
     | SubTitleAriaId of string
     | IsBlocking of bool
     | ContainerClassName of string
-    static member p (xs: IModelProps list) = kvl xs
+    static member p (xs: IModalProps list) = kvl xs
 
   type IDialogProps =
     | Hidden of bool
     | DialogContentProps of IDialogContentProps list
     | MaxWidth of obj
     | MinWidth of obj
-    | ModelProps of IModelProps list
+    | ModalProps of IModalProps list
     | OnDismiss of (unit -> unit)
     | Styles of obj
     | Theme of obj
@@ -41,7 +41,7 @@ module Dialog =
       |> List.fold (fun s x -> match x with
                                 | Props x -> s @ x
                                 | DialogContentProps xs -> unbox("dialogContentProps", IDialogContentProps.p xs) :: s
-                                | ModelProps xs -> unbox("modelProps", IModelProps.p xs) :: s
+                                | ModalProps xs -> unbox("modelProps", IModalProps.p xs) :: s
                                 | x -> (x :> IHTMLProp) :: s) []
       |> kvl
 

@@ -1,2 +1,2 @@
-﻿module FocusZone
+﻿module Fable.UIFabric.FocusZone
 

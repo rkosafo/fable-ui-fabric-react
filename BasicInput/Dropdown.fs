@@ -1,4 +1,4 @@
-﻿namespace UiFabric
+﻿namespace Fable.UIFabric
 
 
 open Fable.Core
@@ -6,14 +6,17 @@ open Fable.React
 open Fable.React.Props
 open Utils
 
-[<RequireQualifiedAccess>]
-module Dropdown =
-  type [<StringEnum(CaseRules.LowerFirst)>] DropdownMenuItemType = Header | Divider
-  type [<Erase>] IDropdownOption = 
+type DropdownMenuItemType = Item = 0 | Divider = 1 | Header = 2
+
+type ResponsiveMode = Small = 0 | Medium = 1 | Large = 2 | XLarge = 3 | XXLarge = 4 | XXXLarge = 5 | Unknown = 999
+
+type IDropdownOption = 
     { key: string
       text: string
       itemType: DropdownMenuItemType }
-  type [<StringEnum(CaseRules.LowerFirst)>] ResponsiveMode = Large | Small
+
+[<RequireQualifiedAccess>]
+module Dropdown =
   type IDropdownProps =
     | Props of IHTMLProp list
     | DefaultSelectedKeys of int []
@@ -23,6 +26,7 @@ module Dropdown =
     | NotifyOnReselect of bool
     | OnChange of (Browser.Types.Event -> IDropdownOption -> int -> unit)
     | OnDismiss of (unit -> unit)
+    | Placeholder of string
     | OnRenderPlaceholder of (IDropdownOption -> ReactElement)
     | OnRenderTitle of (IDropdownOption -> ReactElement)
     | Options of IDropdownOption []
@@ -32,7 +36,7 @@ module Dropdown =
     | SelectedKey of int
     | [<CompiledName("selectedKey")>]SelectedKeyStr of string
     | ErrorMessage of string
-    | Styles of {| root: obj |}
+    | Styles of obj
     | Theme of ITheme
     | Label of string
     | Disabled of bool

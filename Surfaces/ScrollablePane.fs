@@ -1,2 +1,2 @@
-﻿module ScrollablePane
+﻿module Fable.UIFabric.ScrollablePane
 

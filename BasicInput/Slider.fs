@@ -1,2 +1,2 @@
-﻿module Slider
+﻿module Fable.UIFabric.Slider
 

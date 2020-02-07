@@ -1,4 +1,4 @@
-﻿namespace UiFabric
+﻿namespace Fable.UIFabric
 
 
 open Fable.Core.JsInterop

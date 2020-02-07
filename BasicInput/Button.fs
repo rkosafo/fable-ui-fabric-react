@@ -1,4 +1,4 @@
-﻿namespace UiFabric
+﻿namespace Fable.UIFabric
 
 
 open System
@@ -30,6 +30,7 @@ module Button =
     //getSplitButtonClassNames
     | Href of string
     | IconProps of {| iconName: string |} // Icons.IIconProps list
+    | Title of string
     //KeytipProps of IKeytipProps
     | Primary of bool
     | PrimaryDisabled of bool

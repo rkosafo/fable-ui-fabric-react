@@ -1,2 +1,2 @@
-﻿module BasicList
+﻿module Fable.UIFabric.BasicList
 

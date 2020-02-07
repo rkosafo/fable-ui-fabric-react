@@ -1,2 +1,2 @@
-﻿module Selection
+﻿module Fable.UIFabric.Selection
 

@@ -1,2 +1,2 @@
-﻿module HoverCard
+﻿module Fable.UIFabric.HoverCard
 

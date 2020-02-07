@@ -1,2 +1,2 @@
-﻿module MarqueeSelection
+﻿module Fable.UIFabric.MarqueeSelection
 

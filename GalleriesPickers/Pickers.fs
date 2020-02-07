@@ -1,2 +1,2 @@
-﻿module Pickers
+﻿module Fable.UIFabric.Pickers
 

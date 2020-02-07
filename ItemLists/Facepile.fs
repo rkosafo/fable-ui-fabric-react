@@ -1,2 +1,2 @@
-﻿module Facepile
+﻿module Fable.UIFabric.Facepile
 

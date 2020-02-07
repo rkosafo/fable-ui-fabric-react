@@ -1,2 +1,2 @@
-﻿module ComboBox
+﻿module Fable.UIFabric.ComboBox
 
