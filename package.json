@@ -7,9 +7,9 @@
   "private": false,
   "dependencies": {
     "@uifabric/fluent-theme": "^0.16.10",
-    "core-js": "^2.6.3",
-    "office-ui-fabric-react": "^6.184.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "core-js": "^3.3.6",
+    "office-ui-fabric-react": "^7.89.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   }
 }
