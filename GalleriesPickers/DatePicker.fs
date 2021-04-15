@@ -48,7 +48,7 @@ module DatePicker =
     | Theme of ITheme
     | Today of DateTime option
     | Underlined of bool
-    | Value of DateTime
+    | Value of DateTime option
     interface IHTMLProp
     static member p props =
       props
