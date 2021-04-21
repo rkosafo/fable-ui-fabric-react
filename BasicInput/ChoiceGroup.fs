@@ -1,2 +1,2 @@
-﻿module Fable.UIFabric.ChoiceGroup
+﻿module Fable.FluentUI.ChoiceGroup
 

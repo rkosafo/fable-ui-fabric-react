@@ -1,2 +1,2 @@
-﻿module Fable.UIFabric.PeoplePicker
+﻿module Fable.FluentUI.PeoplePicker
 

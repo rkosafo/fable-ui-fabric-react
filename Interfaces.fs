@@ -1,4 +1,4 @@
-﻿namespace Fable.UIFabric
+﻿namespace Fable.FluentUI
 
 
 type ITheme = interface end

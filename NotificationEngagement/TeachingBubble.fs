@@ -1,2 +1,2 @@
-﻿module Fable.UIFabric.TeachingBubble
+﻿module Fable.FluentUI.TeachingBubble
 

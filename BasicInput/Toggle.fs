@@ -1,2 +1,2 @@
-﻿module Fable.UIFabric.Toggle
+﻿module Fable.FluentUI.Toggle
 

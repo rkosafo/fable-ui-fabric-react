@@ -1,2 +1,2 @@
-﻿module Fable.UIFabric.HoverCard
+﻿module Fable.FluentUI.HoverCard
 

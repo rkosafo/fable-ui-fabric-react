@@ -1,2 +1,2 @@
-﻿module Fable.UIFabric.ResizeGroup
+﻿module Fable.FluentUI.ResizeGroup
 

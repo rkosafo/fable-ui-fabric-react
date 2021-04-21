@@ -1,2 +1,2 @@
-﻿module Fable.UIFabric.Facepile
+﻿module Fable.FluentUI.Facepile
 

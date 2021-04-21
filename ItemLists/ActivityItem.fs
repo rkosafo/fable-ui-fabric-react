@@ -1,2 +1,2 @@
-﻿module Fable.UIFabric.ActivityItem
+﻿module Fable.FluentUI.ActivityItem
 

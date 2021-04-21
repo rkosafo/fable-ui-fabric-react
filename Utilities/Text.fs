@@ -1,4 +1,4 @@
-﻿namespace Fable.UIFabric
+﻿namespace Fable.FluentUI
 
 
 open Fable.Core

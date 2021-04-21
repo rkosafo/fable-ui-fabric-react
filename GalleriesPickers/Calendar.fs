@@ -1,2 +1,2 @@
-﻿module Fable.UIFabric.Calendar
+﻿module Fable.FluentUI.Calendar
 

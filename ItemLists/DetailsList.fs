@@ -1,4 +1,4 @@
-﻿namespace Fable.UIFabric
+﻿namespace Fable.FluentUI
 
 open Fable.Core
 open Fable.React
@@ -24,10 +24,10 @@ module DetailsList =
         [<Emit("new $0($1)")>]
         abstract Create: ISelectionOptions -> ISelection
 
-    [<Import("Selection", "office-ui-fabric-react/lib/DetailsList")>]
+    [<Import("Selection", "@fluentui/react/lib/DetailsList")>]
     let SelectionBuilder : SelectionStatic = jsNative
 
-    //[<Import("Selection", "office-ui-fabric-react/lib/DetailsList")>]
+    //[<Import("Selection", "@fluentui/lib/DetailsList")>]
     //let selection: ISelection = jsNative
         
     type IColumn = {

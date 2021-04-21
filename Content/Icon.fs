@@ -1,4 +1,4 @@
-﻿namespace Fable.UIFabric
+﻿namespace Fable.FluentUI
 
 
 open Fable.Core
@@ -32,7 +32,7 @@ module Icons =
 
   ///Call this before using icons
   //let initializeIcons = importMember<unit -> unit> ImportPath
-  let initializeIcons() : unit = importMember "@uifabric/icons"
+  let initializeIcons() : unit = importMember "@fluentui/react/lib/Icons"
 
 
 //[<AutoOpen>]

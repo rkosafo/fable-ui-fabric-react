@@ -1,2 +1,2 @@
-﻿module Fable.UIFabric.Selection
+﻿module Fable.FluentUI.Selection
 

@@ -3,14 +3,13 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
-# Fable 3
-*.fs.js
-
 # User-specific files
 *.suo
 *.user
 *.userosscache
 *.sln.docstates
+
+*.fs.js
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs

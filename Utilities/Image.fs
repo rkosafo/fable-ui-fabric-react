@@ -1,2 +1,2 @@
-﻿module Fable.UIFabric.Image
+﻿module Fable.FluentUI.Image
 

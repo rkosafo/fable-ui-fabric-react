@@ -1,2 +1,2 @@
-﻿module Fable.UIFabric.Modal
+﻿module Fable.FluentUI.Modal
 

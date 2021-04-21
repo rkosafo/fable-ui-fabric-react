@@ -1,2 +1,2 @@
-﻿module Fable.UIFabric.Breadcrumb
+﻿module Fable.FluentUI.Breadcrumb
 

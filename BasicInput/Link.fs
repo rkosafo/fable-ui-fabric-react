@@ -1,2 +1,2 @@
-﻿module Fable.UIFabric.Link
+﻿module Fable.FluentUI.Link
 

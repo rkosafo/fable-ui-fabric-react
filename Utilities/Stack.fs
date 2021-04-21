@@ -1,4 +1,4 @@
-﻿namespace Fable.UIFabric
+﻿namespace Fable.FluentUI
 
 open Fable.React
 open Fable.React.Props
