@@ -1,20 +1,27 @@
-# fable-ui-fabric-react
-Office UI Fabric (react) to Fable bindings
+# Fable.FluentUI
+Fluent UI (react) Fable bindings
 
+# Setup
+
+Install the following packages from NPM:
+
+- "@fluentui/date-time-utilities": "^8.0.2"
+- "@fluentui/react": "^8.11.2"
+- "@fluentui/react-focus": "^8.0.7"
+- "@fluentui/react-icons": "^1.1.118"
 
 # Usage
 This is currently under development and thus has no nuget package. To use
 
 - Clone the project
 - Add *ProjectReference* to your fable project
-- Add *Fable.UiFabric.fsproj* as content
-- Open *UiFabric* and use the components
+- Add *Fable.FluentUI.fsproj* as content
+- Open *Fable.FluentUI* and use the components
 
 
 # Example
 
 ```fsharp
-let root model dispatch =
   div
     [ ]
     [ div []
