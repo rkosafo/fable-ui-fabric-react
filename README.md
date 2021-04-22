@@ -3,7 +3,7 @@ Fluent UI (react) Fable bindings
 
 [![NuGet version (Fable.FluentUI)](https://img.shields.io/nuget/v/Fable.FluentUI.svg?style=flat-square)](https://www.nuget.org/packages/Fable.FluentUI/)
 
-# Install
+# Installation
 
 Install into your project using [Femto](https://github.com/Zaid-Ajaj/Femto) (recommended)
 ```bash
@@ -28,7 +28,7 @@ then installing the npm packages separately
 ```bash
 npm install --save @fluentui/date-time-utilities@8.0.2 @fluentui/react@8.11.2 @fluentui/react-focus@8.0.7 @fluentui/react-icons@1.1.118
 ```
-# Local Project Usage
+## Local Project Usage
 This is a work-in-progress! 
 
 To use the project locally (without nuget):
