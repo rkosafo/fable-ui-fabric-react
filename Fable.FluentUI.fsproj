@@ -11,10 +11,10 @@
 
   <PropertyGroup>
     <NpmDependencies>
-      <NpmPackage Name="@fluentui/react" Version="&gt;= 8.11.2" ResolutionStrategy="Max" />
-      <NpmPackage Name="@fluentui/date-time-utilities" Version="&gt;= 8.0.2" ResolutionStrategy="Max" />
-      <NpmPackage Name="@fluentui/react-focus" Version="&gt;= 8.0.7" ResolutionStrategy="Max" />
-      <NpmPackage Name="@fluentui/react-icons" Version="&gt;= 1.1.118" ResolutionStrategy="Max" />
+      <NpmPackage Name="@fluentui/react" Version="&gt;= 8.11.2 &lt; 9.0.0" ResolutionStrategy="Max" />
+      <NpmPackage Name="@fluentui/date-time-utilities" Version="&gt;= 8.0.2 &lt; 9.0.0" ResolutionStrategy="Max" />
+      <NpmPackage Name="@fluentui/react-focus" Version="&gt;= 8.0.7 &lt; 9.0.0" ResolutionStrategy="Max" />
+      <NpmPackage Name="@fluentui/react-icons" Version="&gt;= 1.1.118 &lt; 2.0.0" ResolutionStrategy="Max" />
     </NpmDependencies>
   </PropertyGroup>
     
