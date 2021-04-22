@@ -5,7 +5,9 @@ Fluent UI (react) Fable bindings
 
 # Setup
 
-Install the following packages from NPM:
+Install using [Femto](https://github.com/Zaid-Ajaj/Femto)!
+
+Or manually install the following packages from NPM:
 
 - "@fluentui/date-time-utilities": "^8.0.2"
 - "@fluentui/react": "^8.11.2"
