@@ -30,34 +30,59 @@ module DetailsList =
     //[<Import("Selection", "@fluentui/lib/DetailsList")>]
     //let selection: ISelection = jsNative
         
-    type IColumn = {
-        Key: string
-        Name: string
-        FieldName: string
-        MinWidth: int
-        MaxWidth: int
-        IsResizable: bool
+    type GetKey<'T> = ('T * int option) -> string
+
+    type IColumn<'T> = {
+        key: string
+        name: string 
+        fieldName: string
+        minWidth: int
+        maxWidth: int
+        isResizable: bool
+        onRender: 'T -> ReactElement
     }
 
-    type IDetailsListProps =
+    type IDetailsListProps<'T> =
         | Props of IHTMLProp list
         | Compact of bool
-        | Items of obj
-        | Columns of IColumn list
+        | Items of 'T array
+        | Columns of IColumn<'T> array
+        | IsHeaderVisible of bool
         | Selection of ISelection
         | ConstrainMode of ConstrainModes
         | SetKey of string
+        | GetKey of GetKey<'T>
         | LayoutMode of DetailsListLayoutMode
         | SelectionPreservedOnEmptyClick of bool
         | AriaLabelForSelectionColumn of string
 
         interface IHTMLProp
-        static member p props =
+        static member p<'T> props =
             props
-            |> List.fold (fun s x -> match x with
-                                     | Props x -> s @ x
-                                     | x -> (x :> IHTMLProp) :: s) []
-                                     |> kvl
+            |> List.fold (fun s x -> 
+                match x with
+                | Props x -> s @ x
+                | GetKey getKey -> 
+                    let safeGetKey((e: 'T), (i: int option)) = if (box e) <> null then getKey(e, i) else null
+                    (GetKey safeGetKey :> IHTMLProp) :: s
+                | x -> (x :> IHTMLProp) :: s) []
+                |> kvl
+            
 
-    let detailsList props = ofImport "DetailsList" ImportPath (IDetailsListProps.p props)
+    let detailsList<'T> props = ofImport "DetailsList" ImportPath (IDetailsListProps<'T>.p<'T> props)
 
+type DetailsList<'T> =
+    /// Creates a DetailsList column.
+    static member Column(name: string, fieldName: string, onRender: 'T -> ReactElement, ?isResizable, ?minWidth, ?maxWidth) =
+        let safeOnRender (t: 'T) = 
+            if (box t) <> null
+            then onRender t
+            else null
+
+        { DetailsList.IColumn.key = fieldName
+          DetailsList.IColumn.fieldName = fieldName
+          DetailsList.IColumn.name = name
+          DetailsList.IColumn.isResizable = isResizable |> Option.defaultValue true
+          DetailsList.IColumn.minWidth = minWidth |> Option.defaultValue 20
+          DetailsList.IColumn.maxWidth = maxWidth |> Option.defaultValue 200
+          DetailsList.IColumn.onRender = safeOnRender }
