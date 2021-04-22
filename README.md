@@ -12,10 +12,10 @@ Install the following packages from NPM:
 - "@fluentui/react-focus": "^8.0.7"
 - "@fluentui/react-icons": "^1.1.118"
 
-# Usage
+# Local Project Usage
 This is a work-in-progress! 
 
-To use:
+To use the project locally (without nuget):
 
 - Clone the project
 - Add *ProjectReference* to your fable project
