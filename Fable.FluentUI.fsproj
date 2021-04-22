@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>0.1.0</Version>
+    <Description>Fable bindings for the FluentUI React library.</Description>
+    <PackageProjectUrl>https://github.com/JordanMarr/Fable.FluentUI</PackageProjectUrl>
+    <PackageTags>fsharp fable react UI fluentui uifabric</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
@@ -84,6 +89,11 @@
 
   <ItemGroup>
     <PackageReference Update="FSharp.Core" Version="5.0.1" />
+  </ItemGroup>
+
+  <!-- Add source files to "fable" folder in Nuget package -->
+  <ItemGroup>
+    <Content Include="*.fsproj; *.fs" PackagePath="fable\" />
   </ItemGroup>
 
 </Project>
