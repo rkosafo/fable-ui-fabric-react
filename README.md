@@ -38,14 +38,6 @@ To use the project locally (without nuget):
 - Add *Fable.FluentUI.fsproj* as content
 - Open *Fable.FluentUI* and use the components
 
-# Icons
-
-To use the icons, make sure to initialize them via your app entry point (usually Main.fs or App.fs):
-
-```
-Fable.FluentUI.Icons.initializeIcons()
-```
-
 # Examples
 See the [wiki](https://github.com/JordanMarr/Fable.FluentUI/wiki) for examples of controls.
 
