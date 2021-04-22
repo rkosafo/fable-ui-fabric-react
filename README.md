@@ -46,28 +46,40 @@ To use the icons, make sure to initialize them via your app entry point (usually
 Fable.FluentUI.Icons.initializeIcons()
 ```
 
-# Example
+# Examples
+See the [wiki](https://github.com/JordanMarr/Fable.FluentUI/wiki) for examples of controls.
+
 
 ```fsharp
-  div
-    [ ]
-    [ div []
-        [ Button.defaultButton [] [ str "I'm a default button" ]
-          Button.primaryButton [] [ str "I'm a primary button" ] ] 
-      hr []
-      div [] [ Icon.icon' Icons.Dictionary ]
-      hr []
-      Dialog.dialog
-        [ Dialog.Hidden true
-          Dialog.OnDismiss (fun _ -> printfn "Dismissed")
-          Dialog.DialogContentProps
-            [ Dialog.Title "Are you sure?"
-              Dialog.SubText "This cannot be undone."
-              Dialog.Type Dialog.DialogType.Normal ]
-          Dialog.ModelProps
-            [ Dialog.IsBlocking true] ]
-        [ h1 [] [ str "Hello world" ]
-          Dialog.dialogFooter
-            [ Button.primaryButton [] [str "OK"]
-              Button.defaultButton [] [str "Cancel"] ] ] ]
+        div [] [ 
+            div [] [ 
+                Button.defaultButton [] [ str "I'm a default button" ]
+                Button.primaryButton [] [ str "I'm a primary button" ] 
+            ] 
+            div [] [ 
+                Icons.icon [
+                    Icons.IconName "Link"
+                    Icons.Props [Props.Style [Color "green"; FontSize "18px"]]
+                ] []
+            ]
+            
+            Dialog.dialog [ 
+                Dialog.Hidden true
+                Dialog.OnDismiss (fun _ -> printfn "Dismissed")
+                Dialog.DialogContentProps [ 
+                    Dialog.Title "Are you sure?"
+                    Dialog.SubText "This cannot be undone."
+                    Dialog.Type Dialog.DialogType.Normal 
+                ]
+                Dialog.ModalProps [ 
+                    Dialog.IsBlocking true
+                ] 
+            ] [ 
+                h1 [] [ str "Hello world" ]
+                Dialog.dialogFooter [ 
+                    Button.primaryButton [] [str "OK"]
+                    Button.defaultButton [] [str "Cancel"] 
+                ] 
+            ] 
+        ]
 ```
