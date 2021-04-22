@@ -3,17 +3,31 @@ Fluent UI (react) Fable bindings
 
 [![NuGet version (Fable.FluentUI)](https://img.shields.io/nuget/v/Fable.FluentUI.svg?style=flat-square)](https://www.nuget.org/packages/Fable.FluentUI/)
 
-# Setup
+# Install
 
-Install using [Femto](https://github.com/Zaid-Ajaj/Femto)!
+Install into your project using [Femto](https://github.com/Zaid-Ajaj/Femto) (recommended)
+```bash
+cd ./path/to/YourProject
 
-Or manually install the following packages from NPM:
+# when using femto as a global CLI tool
+femto install Fable.FluentUI
 
-- "@fluentui/date-time-utilities": "^8.0.2"
-- "@fluentui/react": "^8.11.2"
-- "@fluentui/react-focus": "^8.0.7"
-- "@fluentui/react-icons": "^1.1.118"
+# when using femto as a local CLI tool
+dotnet femto install Fable.FluentUI
+```
+This will install the nuget package and afterwards automatically installs the required npm packages used by this binding. 
 
+> Femto will detect whether you are using paket and will install the package using paket into the dependency group of the project
+
+You can install the library manually if you want by first installing the nuget package
+```bash
+cd ./path/to/YourProject
+dotnet add package Fable.FluentUI
+```
+then installing the npm packages separately
+```bash
+npm install --save @fluentui/date-time-utilities@8.0.2 @fluentui/react@8.11.2 @fluentui/react-focus@8.0.7 @fluentui/react-icons@1.1.118
+```
 # Local Project Usage
 This is a work-in-progress! 
 
@@ -26,7 +40,7 @@ To use the project locally (without nuget):
 
 # Icons
 
-To use the icons, you must initialize them via your app root (Main.fs or App.fs):
+To use the icons, make sure to initialize them via your app entry point (usually Main.fs or App.fs):
 
 ```
 Fable.FluentUI.Icons.initializeIcons()
