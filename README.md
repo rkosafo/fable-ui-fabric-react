@@ -1,6 +1,8 @@
 # Fable.FluentUI
 Fluent UI (react) Fable bindings
 
+[![NuGet version (Fable.FluentUI)](https://img.shields.io/nuget/v/Fable.FluentUI.svg?style=flat-square)](https://www.nuget.org/packages/Fable.FluentUI/)
+
 # Setup
 
 Install the following packages from NPM:
@@ -11,7 +13,9 @@ Install the following packages from NPM:
 - "@fluentui/react-icons": "^1.1.118"
 
 # Usage
-This is currently under development and thus has no nuget package. To use
+This is a work-in-progress! 
+
+To use:
 
 - Clone the project
 - Add *ProjectReference* to your fable project
