@@ -6,11 +6,11 @@
     "license": "MIT",
     "private": false,
     "dependencies": {
-        "@fluentui/date-time-utilities": "^8.0.2",
-        "@fluentui/react": "^8.11.2",
-        "@fluentui/react-focus": "^8.0.7",
-        "@fluentui/react-icons": "^1.1.118",
-        "@fluentui/theme": "^2.0.4",
+        "@fluentui/date-time-utilities": "^8.1.1",
+        "@fluentui/react": "^8.16.0",
+        "@fluentui/react-focus": "^8.1.2",
+        "@fluentui/react-icons": "^1.1.127",
+        "@fluentui/theme": "^2.1.1",
         "core-js": "^2.6.3",
         "react": "^17.0.1",
         "react-dom": "^17.0.1"
