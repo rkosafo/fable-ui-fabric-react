@@ -1,8 +1,9 @@
-﻿namespace UiFabric
+﻿namespace Fable.FluentUI
 
 
 module Utils =
   open Fable.Core
 
-  let [<Literal>] ImportPath = "office-ui-fabric-react"
+  let [<Literal>] ImportPath = "@fluentui/react"
+  let [<Literal>] ImportPathLib = "@fluentui/react/lib"
   let kvl xs = JsInterop.keyValueList CaseRules.LowerFirst xs

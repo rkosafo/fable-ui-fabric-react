@@ -1,2 +1,2 @@
-﻿module SwatchColorPicker
+﻿module Fable.FluentUI.SwatchColorPicker
 

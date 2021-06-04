@@ -1,15 +1,18 @@
 {
-  "name": "uifabric",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "rko",
-  "license": "MIT",
-  "private": false,
-  "dependencies": {
-    "@uifabric/fluent-theme": "^0.16.10",
-    "core-js": "^2.6.3",
-    "office-ui-fabric-react": "^6.184.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
-  }
+    "name": "uifabric",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "rko",
+    "license": "MIT",
+    "private": false,
+    "dependencies": {
+        "@fluentui/date-time-utilities": "^8.1.1",
+        "@fluentui/react": "^8.16.0",
+        "@fluentui/react-focus": "^8.1.2",
+        "@fluentui/react-icons": "^1.1.127",
+        "@fluentui/theme": "^2.1.1",
+        "core-js": "^2.6.3",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1"
+    }
 }

@@ -1,2 +1,2 @@
-﻿module Keytips
+﻿module Fable.FluentUI.Keytips
 

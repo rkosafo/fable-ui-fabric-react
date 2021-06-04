@@ -1,4 +1,4 @@
-﻿namespace UiFabric
+﻿namespace Fable.FluentUI
 
 
 open Fable.Core
@@ -9,7 +9,7 @@ open Fable.Core.JsInterop
 
 
 type [<StringEnum>] Icons =
-  | Dictionary
+  | Delete
 
 
 [<RequireQualifiedAccess>]
@@ -31,12 +31,13 @@ module Icons =
     |> kvl
 
   ///Call this before using icons
-  let initializeIcons = importMember<unit -> unit> ImportPath
+  //let initializeIcons = importMember<unit -> unit> ImportPath
+  let initializeIcons() : unit = importMember "@fluentui/react/lib/Icons"
 
 
-[<AutoOpen>]
-module Auto =
+//[<AutoOpen>]
+//module Auto =
   let icon props = ofImport "Icon" ImportPath (p props)
 
   ///Create an icon with the given name
-  let icon' (name: Icons) = icon [Icons.IconName !!name] []
+  let icon' (name: string) = icon [IconName name] []

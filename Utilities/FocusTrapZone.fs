@@ -1,2 +1,2 @@
-﻿module FocusTrapZone
+﻿module Fable.FluentUI.FocusTrapZone
 

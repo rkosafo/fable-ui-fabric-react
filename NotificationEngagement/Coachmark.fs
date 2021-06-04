@@ -1,2 +1,2 @@
-﻿module Coachmark
+﻿module Fable.FluentUI.Coachmark
 

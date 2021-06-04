@@ -1,2 +1,2 @@
-﻿module Link
+﻿module Fable.FluentUI.Link
 

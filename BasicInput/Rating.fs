@@ -1,2 +1,2 @@
-﻿module Rating
+﻿module Fable.FluentUI.Rating
 

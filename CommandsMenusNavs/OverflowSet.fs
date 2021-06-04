@@ -1,2 +1,2 @@
-﻿module OverflowSet
+﻿module Fable.FluentUI.OverflowSet
 

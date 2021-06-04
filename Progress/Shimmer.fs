@@ -1,2 +1,2 @@
-﻿module Shimmer
+﻿module Fable.FluentUI.Shimmer
 
