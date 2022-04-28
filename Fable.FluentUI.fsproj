@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>0.6.0</Version>
+    <Version>0.7.0</Version>
     <Description>Fable bindings for the FluentUI React library.</Description>
     <PackageProjectUrl>https://github.com/JordanMarr/Fable.FluentUI</PackageProjectUrl>
     <PackageTags>fsharp fable react UI fluentui uifabric</PackageTags>
@@ -11,10 +11,11 @@
 
   <PropertyGroup>
     <NpmDependencies>
-      <NpmPackage Name="@fluentui/react" Version="&gt;= 8.11.2 &lt; 9.0.0" ResolutionStrategy="Max" />
-      <NpmPackage Name="@fluentui/date-time-utilities" Version="&gt;= 8.0.2 &lt; 9.0.0" ResolutionStrategy="Max" />
-      <NpmPackage Name="@fluentui/react-focus" Version="&gt;= 8.0.7 &lt; 9.0.0" ResolutionStrategy="Max" />
-      <NpmPackage Name="@fluentui/react-icons" Version="&gt;= 1.1.118 &lt; 2.0.0" ResolutionStrategy="Max" />
+      <NpmPackage Name="@fluentui/react" Version="&gt;= 8.11.2 &lt; 8.12.0" ResolutionStrategy="Max" />
+      <NpmPackage Name="@fluentui/date-time-utilities" Version="&gt;= 8.0.2 &lt; 8.1.0" ResolutionStrategy="Max" />
+      <NpmPackage Name="@fluentui/react-focus" Version="&gt;= 8.0.7 &lt; 8.1.0" ResolutionStrategy="Max" />
+      <NpmPackage Name="@fluentui/react-icons" Version="&gt;= 1.1.118 &lt; 1.2.0" ResolutionStrategy="Max" />
+      <NpmPackage Name="@fluentui/theme" Version="&gt;= 2.1.1 &lt; 2.2.0" ResolutionStrategy="Max" />
     </NpmDependencies>
   </PropertyGroup>
     

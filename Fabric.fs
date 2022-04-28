@@ -28,5 +28,8 @@ module Fabric =
 [<AutoOpen>]
 module General =
   let customizer p els = ofImport "Customizer" ImportPath p els
-  let FluentCustomizations = importMember<obj> "@fluentui/theme"
+
+  // Causes compile warning: 
+  // export 'FluentCustomizations' was not found in '@fluentui/theme'
+  //let FluentCustomizations = importMember<obj> "@fluentui/theme" 
 
