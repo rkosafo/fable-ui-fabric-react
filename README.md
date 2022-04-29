@@ -5,9 +5,9 @@ Fluent UI (react) Fable bindings
 
 # Installation
 
-Install into your project using [Femto](https://github.com/Zaid-Ajaj/Femto) (recommended)
+Install into your Client.fsproj project using [Femto](https://github.com/Zaid-Ajaj/Femto) (recommended)
 ```bash
-cd ./path/to/YourProject
+cd ./path/to/Client.fsproj
 
 # when using femto as a global CLI tool
 femto install Fable.FluentUI
