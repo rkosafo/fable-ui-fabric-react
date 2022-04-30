@@ -1,2 +1,2 @@
-﻿module MarqueeSelection
+﻿module Fable.FluentUI.MarqueeSelection
 

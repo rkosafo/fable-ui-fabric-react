@@ -1,2 +1,2 @@
-﻿module Layer
+﻿module Fable.FluentUI.Layer
 

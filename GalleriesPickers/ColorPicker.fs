@@ -1,2 +1,2 @@
-﻿module ColorPicker
+﻿module Fable.FluentUI.ColorPicker
 

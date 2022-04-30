@@ -1,4 +1,4 @@
-﻿namespace UiFabric
+﻿namespace Fable.FluentUI
 
 
 open System
@@ -41,13 +41,14 @@ module DatePicker =
     | ShowMonthPickerAsOverlay of bool
     | ShowWeekNumbers of bool
     | Styles of {| root: obj |}
+    | Style of obj
     | TabIndex of int
     | TextField of TextField.ITextFieldProps list
     | OnValidate of (string -> string)
     | Theme of ITheme
     | Today of DateTime option
     | Underlined of bool
-    | Value of DateTime
+    | Value of DateTime option
     interface IHTMLProp
     static member p props =
       props

@@ -1,4 +1,4 @@
-﻿namespace UiFabric
+﻿namespace Fable.FluentUI
 
 
 open Fable.Core
@@ -16,8 +16,8 @@ module Fabric =
     static member p props =
       props
       |> List.fold (fun s x -> match x with
-                               | Props x -> s @ x
-                               | x -> (x :> IHTMLProp) :: s) []
+                               | Props x -> s @ x) []
+                               //| x -> (x :> IHTMLProp) :: s) [] 
       |> kvl
 
   let fabric props = ofImport "Fabric" ImportPath (IFabricProps.p props)
@@ -28,5 +28,8 @@ module Fabric =
 [<AutoOpen>]
 module General =
   let customizer p els = ofImport "Customizer" ImportPath p els
-  let FluentCustomizations = importMember<obj> "@uifabric/fluent-theme"
+
+  // Causes compile warning: 
+  // export 'FluentCustomizations' was not found in '@fluentui/theme'
+  //let FluentCustomizations = importMember<obj> "@fluentui/theme" 
 

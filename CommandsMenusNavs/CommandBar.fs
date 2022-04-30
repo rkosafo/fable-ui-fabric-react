@@ -1,4 +1,4 @@
-﻿namespace UiFabric
+﻿namespace Fable.FluentUI
 
 
 open Fable.Core
@@ -9,14 +9,14 @@ open Utils
 [<RequireQualifiedAccess>]
 module CommandBar =
   type ICommandBarItemProps =
-    {|key: string
+    { key: string
       name: string
       cacheKey: string
       iconProps: {| iconName: string |}
       split: bool
       disabled: bool
       iconOnly: bool
-      onClick: (unit -> unit)|}
+      onClick: (unit -> unit) }
   type ICommandBarProps =
     | Props of IHTMLProp list
     | ClassName of string
@@ -34,4 +34,7 @@ module CommandBar =
       |> kvl
 
   let commandBar props = ofImport "CommandBar" ImportPath (ICommandBarProps.p props)
+
+  let itemWithIcon (key: string, name: string, iconName: string, onClick: unit -> unit) = 
+    { key = key; name = name; cacheKey = key; iconProps = {| iconName = iconName |}; split = false; disabled = false; iconOnly = false; onClick = onClick }
 

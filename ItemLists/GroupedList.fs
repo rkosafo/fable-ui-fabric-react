@@ -1,2 +1,2 @@
-﻿module GroupedList
+﻿module Fable.FluentUI.GroupedList
 

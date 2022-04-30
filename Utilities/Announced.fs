@@ -1,2 +1,2 @@
-﻿module Announced
+﻿module Fable.FluentUI.Announced
 

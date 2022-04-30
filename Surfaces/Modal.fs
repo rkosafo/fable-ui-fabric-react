@@ -1,2 +1,2 @@
-﻿module Modal
+﻿module Fable.FluentUI.Modal
 

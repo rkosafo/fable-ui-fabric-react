@@ -1,2 +1,2 @@
-﻿module Tooltip
+﻿module Fable.FluentUI.Tooltip
 
