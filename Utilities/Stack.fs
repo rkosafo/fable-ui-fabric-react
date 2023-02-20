@@ -45,7 +45,7 @@ module Stack =
             |> List.choose (fun p -> match p with Gap gap -> Some (Tokens {| childrenGap = gap; padding = "" |}) | _ -> Some p)
 
 
-        ofImport "Stack" ImportPathLib (IStackProps.p props)
+        ofImport "Stack" ImportPath (IStackProps.p props)
 
 [<RequireQualifiedAccess>]
 module StackItem =
@@ -67,5 +67,5 @@ module StackItem =
                 |> kvl
 
     let stackItem props = 
-        ofImport "StackItem" ImportPathLib (IStackItemProps.p props)
+        ofImport "StackItem" ImportPath (IStackItemProps.p props)
 

@@ -12,7 +12,7 @@ module SpinButton =
   type ISpinButtonProps =
     | Props of IHTMLProp list
     | ClassName of string
-    | DefaultValue of string
+    | DefaultValue of obj
     | Disabled of bool
     | Label of string
     | LabelPosition of LabelPosition
@@ -25,11 +25,13 @@ module SpinButton =
     | OnValidate of (string -> Browser.Types.Event -> string)
     | OnFocus of (unit -> unit)
     | OnBlur of (Browser.Types.Event -> unit)
+    | OnChange of (Browser.Types.Event -> unit)
+    | OnMouseUp of (Browser.Types.Event -> unit)
     | Precision of int
     | Step of double
     | Styles of {| root: obj |}
     | Theme of ITheme
-    | Value of string
+    | Value of obj
     | IsRequired of bool
     interface IHTMLProp
     static member p props =

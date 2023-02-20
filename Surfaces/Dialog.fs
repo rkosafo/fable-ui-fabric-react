@@ -14,6 +14,7 @@ module Dialog =
     type IDialogContentProps =
     | Type of DialogType
     | Title of string
+    | Class of string
     | SubText of string
         static member p (props: IDialogContentProps list) = kvl props
 

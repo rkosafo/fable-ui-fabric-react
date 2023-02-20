@@ -6,6 +6,22 @@ open Fable.Core
 open Utils
 open Fable.React
 
+type ButtonMenuItemType = Item = 0 | Divider = 1
+
+type IButtonMenuIconProps = 
+    { iconName: string }
+
+type IButtonMenuOption = 
+    { key: string
+      text: string
+      iconProps: IButtonMenuIconProps
+      itemType: ButtonMenuItemType 
+      disabled: bool
+      onClick: unit -> unit }
+
+type IButtonMenuProps = 
+    { items: IButtonMenuOption[] }
+
 [<RequireQualifiedAccess>]
 module Button =
     open Fable.React.Props
@@ -40,7 +56,7 @@ module Button =
         | Style of obj
         | Text of string
         | Toggle of bool
-        | MenuProps of {| items: {| key:string; text: string; iconProps: {| iconName: string |}; onClick: (unit -> unit) |} [] |}
+        | MenuProps of IButtonMenuProps
         //| MenuProps of IBtnMenuProps
         | UniqueId of string
         | OnClick of (Browser.Types.Event -> unit)
@@ -50,10 +66,11 @@ module Button =
 
     let p (props: IButtonProps list) =
         props 
-        |> List.fold (fun s x -> match x with
-                                 | Props x -> s @ x
-                                 //| IconProps xs -> unbox("iconProps", Icons.p xs) :: s
-                                 | x -> (x :> IHTMLProp) :: s) []
+        |> List.fold (fun s x -> 
+            match x with
+            | Props x -> s @ x
+            //| IconProps xs -> unbox("iconProps", Icons.p xs) :: s
+            | x -> (x :> IHTMLProp) :: s) []
         |> kvl
 
     let defaultButton props = ofImport "DefaultButton" ImportPath (p props)
@@ -64,9 +81,17 @@ module Button =
     let actionButton props = ofImport "ActionButton" ImportPath (p props)
     let commandButton props = ofImport "CommandButton" ImportPath (p props)
 
-    // commandButton - child buttons (MenuItems) helpers:
-    let menuItem (key: string, text: string, iconName: string, onClick: unit -> unit) =
-        {| key = key; text = text; iconProps = {| iconName = iconName |}; onClick = onClick |}
+type Button =
+    static member menuItem(key: string, text: string, iconName: string, onClick: unit -> unit, ?disabled: bool) =
+        { key = key
+        ; text = text
+        ; iconProps = { iconName = iconName }
+        ; onClick = onClick
+        ; disabled = defaultArg disabled false
+        ; itemType = ButtonMenuItemType.Item; }
+        
+    static member menuDivider = 
+        { key = "divider"; text = "-"; iconProps = { iconName = "" }; onClick = id; itemType = ButtonMenuItemType.Divider; disabled = false; }
 
-    let toMenuProps menuItems =
-        {| items = menuItems |> Seq.toArray |}
+    static member toMenuProps (menuItems: IButtonMenuOption seq) =
+        { items = menuItems |> Seq.toArray }
