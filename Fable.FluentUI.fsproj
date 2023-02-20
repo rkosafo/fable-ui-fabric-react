@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>0.7.0</Version>
+    <Version>1.0.0</Version>
     <Description>Fable bindings for the FluentUI React library.</Description>
     <PackageProjectUrl>https://github.com/JordanMarr/Fable.FluentUI</PackageProjectUrl>
     <PackageTags>fsharp fable react UI fluentui uifabric</PackageTags>
@@ -11,11 +11,11 @@
 
   <PropertyGroup>
     <NpmDependencies>
-      <NpmPackage Name="@fluentui/react" Version="&gt;= 8.11.2 &lt; 8.12.0" ResolutionStrategy="Max" />
-      <NpmPackage Name="@fluentui/date-time-utilities" Version="&gt;= 8.0.2 &lt; 8.1.0" ResolutionStrategy="Max" />
-      <NpmPackage Name="@fluentui/react-focus" Version="&gt;= 8.0.7 &lt; 8.1.0" ResolutionStrategy="Max" />
-      <NpmPackage Name="@fluentui/react-icons" Version="&gt;= 1.1.118 &lt; 1.2.0" ResolutionStrategy="Max" />
-      <NpmPackage Name="@fluentui/theme" Version="&gt;= 2.1.1 &lt; 2.2.0" ResolutionStrategy="Max" />
+      <NpmPackage Name="@fluentui/react" Version="&gt;= 8.105.8" ResolutionStrategy="Max" />
+      <NpmPackage Name="@fluentui/date-time-utilities" Version="&gt;= 8.1.2" ResolutionStrategy="Max" />
+      <NpmPackage Name="@fluentui/react-focus" Version="&gt;= 8.8.14" ResolutionStrategy="Max" />
+      <NpmPackage Name="@fluentui/react-icons" Version="&gt;= 2.0.194" ResolutionStrategy="Max" />
+      <NpmPackage Name="@fluentui/theme" Version="&gt;= 2.6.22 &lt; 2.7.0" ResolutionStrategy="Max" />
     </NpmDependencies>
   </PropertyGroup>
     
@@ -86,19 +86,24 @@
     <Compile Include="Utilities\Text.fs" />
   </ItemGroup>
 
-  <ItemGroup />
-
   <ItemGroup>
-    <PackageReference Include="Fable.React" Version="7.0.1" />
+    <EmbeddedResource Remove="obj\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Update="FSharp.Core" Version="4.7.2" />
+    <PackageReference Include="Fable.React" Version="9.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="6.0.7" />
   </ItemGroup>
 
   <!-- Add source files to "fable" folder in Nuget package -->
   <ItemGroup>
     <Content Include="*.fsproj; **\*.fs" Exclude="**\*.fs.js" PackagePath="fable\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="obj\**" />
   </ItemGroup>
 
 </Project>
